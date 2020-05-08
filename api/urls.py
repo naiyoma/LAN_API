@@ -20,5 +20,5 @@ from api.schema import schema
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(r'graphql', GraphQLView.as_view(graphiql=True, schema=schema)),
+    path(r"graphql", GraphQLView.as_view(graphiql=True, schema=schema)),
 ]

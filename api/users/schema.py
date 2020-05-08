@@ -2,14 +2,14 @@ import graphene
 
 from graphene_django.types import DjangoObjectType
 
-from api.users.models import Category
+from api.users.models import User
 
-class CategoryType(DjangoObjectType):
+class User(DjangoObjectType):
     class Meta:
-        model = Category
+        model = User
 
-class Query(object):
-    all_categories = graphene.List(CategoryType)
+class Query(graphene.ObjectType):
+    users = graphene.List(User)
 
-    def resolve_all_categories(self, info, **kwargs):
-        return Category.objects.all()
+    def resolve_users(self, info):
+        return UserModel.objects.all()
