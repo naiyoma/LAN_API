@@ -23,7 +23,7 @@ class Query(graphene.ObjectType):
     all_categories = graphene.List(CategoryType)
 
     def resolve_category(self, info, **kwargs):
-
+        #fetching a single category based on name
         id = kwargs.get('id')
         name = kwargs.get('name')
 
