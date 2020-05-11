@@ -55,6 +55,9 @@ class Query(graphene.ObjectType):
         return User.objects.all()
 
     def resolve_all_categories(self, info, **Kwargs):
+        """
+        fetching all categories.
+        """
         return Category.objects.all()
 
 schema = graphene.Schema(query=Query)
