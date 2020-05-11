@@ -49,6 +49,9 @@ class Query(graphene.ObjectType):
         return None
 
     def resolve_all_users(self, info, **Kwargs):
+        """
+        fetching all users.
+        """
         return User.objects.all()
 
     def resolve_all_categories(self, info, **Kwargs):
