@@ -36,6 +36,7 @@ class Query(graphene.ObjectType):
         return None
 
     def resolve_user(self, info, **kwargs):
+        #fetching a single user
         id = kwargs.get('id')
         name = kwargs.get('name')
 
